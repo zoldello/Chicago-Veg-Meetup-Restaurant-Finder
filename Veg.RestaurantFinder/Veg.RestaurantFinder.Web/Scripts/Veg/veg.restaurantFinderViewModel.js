@@ -7,7 +7,7 @@
 
         self.restaurants = ko.observableArray().extend({ notify: 'always' });
         self.direction = ko.observable().extend({ notify: 'always' });
-        self.locationAutoDetectable = ko.observable(!!navigator.geolocation);
+        self.locationAutoDetectable = ko.observable().extend({notify: 'always'});
         self.currentSelectedRestaurant = {
             restaurant: ko.observable().extend({ notify: 'always' }),
             marker: null,

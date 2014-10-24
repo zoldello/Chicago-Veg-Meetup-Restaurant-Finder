@@ -46,6 +46,7 @@
 
                 toastr.warn('Automatic location detection', 'Automatic location detection is not supported by this browser. Manually add location');
 
+                bindingContext.$root.locationAutoDetectable(false);
                 bindingContext.$root.userLocation.latitude = '41.45654';
                 bindingContext.$root.userLocation.longitude = '-87.655555'; // some location in Chicago
                 latLng = new google.maps.LatLng(bindingContext.$root.userLocation.latitude, bindingContext.$root.userLocation.longitude);
@@ -60,6 +61,7 @@
                         var markerNameWithGeolocation = "Your present location",
                         latitudeLongitude = new google.maps.LatLng(position.coords.latitude, position.coords.longitude); // user's current location
 
+                        bindingContext.$root.locationAutoDetectable(true);
                         bindingContext.$root.userLocation.latitude = position.coords.latitude;
                         bindingContext.$root.userLocation.longitude = position.coords.longitude;
 
@@ -72,7 +74,8 @@
                             var markerNameNoGeolocation = 'Chicago',
                                 latLng;
 
-                            this.toastr.error('Automatic location detection', 'Automatic location detection is not supported by this browser. Manually add location');
+                            bindingContext.$root.locationAutoDetectable(false);
+                            this.toastr.error('Automatic location detection', 'Permssion to use Automatic location detecti was denied. Manually add location');
 
                             this.bindingContext.$root.userLocation.latitude = '41.45654';
                             this.bindingContext.$root.userLocation.longitude = '-87.655555'; // some location in Chicago

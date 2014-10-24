@@ -122,6 +122,7 @@
     <Content Include="Scripts\underscore.string.js" />
     <Content Include="Scripts\underscore.string.min.js" />
     <Content Include="Scripts\Veg\extensions\underscore.emptyFunction.js" />
+    <Content Include="Scripts\Veg\ko\ko.bindingHandlers.autoDetectLocation.js" />
     <Content Include="Scripts\Veg\ko\ko.bindingHandlers.directions.js" />
     <Content Include="Scripts\Veg\ko\ko.bindingHandlers.getUserLocation.js" />
     <Content Include="Scripts\Veg\ko\ko.bindingHandlers.selectRestaurant.js" />

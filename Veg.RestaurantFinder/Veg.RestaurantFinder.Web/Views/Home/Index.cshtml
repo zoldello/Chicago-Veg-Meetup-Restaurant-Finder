@@ -13,9 +13,9 @@
         <div class="col-md-5">
             <fieldset>
                 <legend>Your Location</legend>
-                <div data-bind="ifnot: $root.locationAutoDetectable">
+                <div style="display: none;" data-bind="autoDetectLocation: $root.locationAutoDetectable">
                     <input type="radio" name="location" value="auto" checked="checked" /> Auto-detect <br />
-                    <input type="radio" name="location" value="manual" /> Manual 
+                    <input type="radio" name="location" value="manual" /> Manual
                 </div>
                 <div>
                     Address: <input type="text" name="userAdress" /> <br />
@@ -83,6 +83,7 @@
 <script src="~/Scripts/Veg/ko/ko.bindingHandlers.selectRestaurant.js"></script>
 <script src="~/Scripts/Veg/ko/ko.bindingHandlers.directions.js"></script>
 <script src="~/Scripts/Veg/ko/ko.bindingHandlers.getUserLocation.js"></script>
+<script src="~/Scripts/Veg/ko/ko.bindingHandlers.autoDetectLocation.js"></script>
 
      
 <script src="~/Scripts/Veg/veg.binding.js"></script>
